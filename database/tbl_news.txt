@@ -1,0 +1,15 @@
+CREATE TABLE `tbl_news` (
+  `news_id` int(11) NOT NULL,
+  `news_title` varchar(300) NOT NULL COMMENT 'ชื่อข่าว/หัวข้อข่าว',
+  `news_intro` varchar(300) NOT NULL COMMENT 'เนื้อข่าวย่อๆ',
+  `news_detail` text NOT NULL COMMENT 'รายละเอียดข่าว',
+  `news_status` varchar(10) NOT NULL DEFAULT 'show',
+  `news_img` varchar(100) NOT NULL,
+  `news_datesave` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER TABLE `tbl_news`
+  ADD PRIMARY KEY (`news_id`);
+  
+ALTER TABLE `tbl_news`
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
